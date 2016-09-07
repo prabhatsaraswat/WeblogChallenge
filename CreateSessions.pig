@@ -27,6 +27,8 @@ session_times = FOREACH (GROUP SessionizedLogs BY s_id){
                             FLATTEN(ip), COUNT(url) as unique_urls;
 }
 
+dump session_times;
+
 session_times_sum = FOREACH (GROUP session_times BY ip){
 	total_session_time = SUM(session_times.session_length);
 	GENERATE FLATTEN(session_times.ip) as ip, total_session_time as total_session_time;
