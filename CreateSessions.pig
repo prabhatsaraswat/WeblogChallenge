@@ -1,3 +1,5 @@
+# referenced from
+# https://github.com/linkedin/datafu/blob/master/examples/sessionize/sessionize.pig
 register datafu-pig-incubating-1.3.1.jar
 register piggybank-0.11.0.jar
 
